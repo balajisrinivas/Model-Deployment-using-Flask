@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ML Deployment</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/main.css') }}">
+		<link rel = "icon" href =  "{{ url_for('static', filename='images/logo.png') }}" type = "image/x-icon">
+	</head>
+	<body>
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="/portfolio" class="logo">Balaji Srinivasan</a>
+					<nav id="nav">
+						<a href="/">Home</a>
+						<a href="https://github.com/balajisrinivas" target="_blank">GitHub</a>
+						<a href="https://www.linkedin.com/in/balaji-srinivasan-493a08104/" target="_blank">LINKEDIN</a>
+					</nav>
+				</div>
+			</header>
+
+		<!-- Center -->
+		<form action="{{ url_for('predict')}}" method="POST">
+			<section id="banner">
+				<div class="inner">
+					<h3>Spam Prediction</h3>
+					<strong>Enter message</strong>
+					<input type="text" name="message" id="message" required>
+					<br>
+					<input type="submit" class="button alt" value="PREDICT">
+					<br><br><br><br>
+				</div>
+			</section>
+		</form>
+
+		<!-- Footer -->
+			<section id="one">
+				<div class="inner">
+					<header>
+						<h2>PREDICTIONS</h2>
+					</header>
+					<p></p>
+				</div>
+			</section>
+	</body>
+</html>
